@@ -1,0 +1,878 @@
+:root {
+    --green-color: #7eb728;
+    --text-color: #777777;
+    --white-color: #fff;
+    --white-light-color: #e9f2e0;
+    --black-color: #000;
+    --line-color: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+.container {
+    position: relative;
+}
+
+.clear {
+    clear: both;
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+    box-sizing: border-box;
+}
+html p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 5rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--black-color);
+}
+
+.sub_title p {
+    font-size: 2rem;
+    color: var(--black-color);
+    text-transform: uppercase;
+}
+
+.btn {
+    border: none;
+    background-color: var(--green-color);
+    color: var(--white-color);
+    padding: 16px 40px;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+.header_content {
+    position: relative;
+}
+
+/* Begin Header PC */
+.header_pc_top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line-color);
+}
+.header_top_right {
+    display: flex;
+}
+
+.header_top_left {
+    display: flex;
+    align-items: center;
+    color: var(--green-color);
+    font-weight: 500;
+}
+
+.header_top_right {
+    color: var(--text-color);
+}
+
+.header_info_right {
+    display: flex;
+    margin-left: 16px;
+    align-items: center;
+}
+
+.header_info_right span {
+    font-size: 115%;
+    margin-right: 6px;
+    color: var(--green-color);
+}
+
+.header_info_right .header_contact {
+    margin-left: 28px;
+}
+
+.header_contact i {
+    margin-right: 1rem;
+}
+
+.header_info_right .header_contact a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.line_left_right {
+    border-left: 1px solid var(--line-color);
+    border-right: 1px solid var(--line-color);
+    border-bottom: none;
+    border-top: none;
+    padding: 0 26px;
+}
+
+.header_info_right select {
+    border: none;
+    outline: none;
+}
+
+.header_user:hover,
+.header_info_right select:hover {
+    color: var(--green-color);
+    cursor: pointer;
+}
+
+.header_languages_img img {
+    width: 100%;
+}
+
+.header_avatar_img img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.header_info_right .header_languages_img {
+    width: 26px;
+    margin-right: 10px;
+}
+
+.header_info_right .header_avatar_img {
+    width: 30px;
+    margin-right:10px;
+    margin-top: 5px;;
+}
+
+.header_user {
+    color: var(--black-color);
+    font-weight: 500;
+}
+
+.header_user_rank {
+    margin-left: 10px;
+    color: var(--green-color);
+    font-size: 13px;
+}
+
+.header_pc_bottom {
+    display: flex;
+    justify-content: space-between;
+}
+.header_pc_content {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    min-width: 118px;
+}
+
+.header_menu_pc {
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 180%;
+    margin: 0 32px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.header_menu_pc:hover {
+    color: var(--green-color);
+    transition: all 0.3s ease;
+}
+
+.menu_pc_active {
+    color: var(--green-color);
+}
+
+/* End Header PC */
+
+
+/* Begin Header Mobile and tablet */
+.header_mobile_tablet {
+    height: 66px;
+    display: flex;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    background-color: var(--white-color);
+    border-bottom: 1px solid var(--line-color);
+    z-index: 1;
+}
+
+.logo_header {
+    margin-left: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.icon_menu-close,
+.icon_menu-open {
+    font-size: 4rem;
+    padding-right: 16px;
+    color: var(--black-color);
+    transition: all 0.5s ease;
+}
+
+.icon_menu-close:hover,
+.icon_menu-open:hover {
+    color: var(--green-color)
+}
+
+.close {
+    display: none;
+}
+
+.menu_mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.menu_content {
+    margin: 0;
+    position: fixed;
+    left: 0;
+    top: 66px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    line-height: 3;
+    z-index: 1000;
+    font-size: 2rem;
+    font-weight: bold;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: center;
+    animation: fadeIn ease-in 0.5s;
+    color: var(--white-color);
+    background-color: var(--green-color);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#weather {
+    font-size: 3.4rem;
+    color: var(--green-color);
+}
+
+#weather_info {
+    margin-left: 14px;
+}
+
+.weather_info_number {
+    color: var(--green-color);
+    font-size: 2.8rem;
+    position: relative;
+}
+
+.weather_info_number p {
+    margin: 0;
+}
+
+.weather_info_number span {
+    font-size: 1.8rem;
+    position: absolute;
+    top: -40%;
+    left: 50%;
+}
+
+.weather_info_text {
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.weather_info_text p {
+    margin: 10px 0 0 0;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.menu_content_close {
+    display: flex;
+}
+
+.menu_content li {
+    text-align: center;
+    margin-right: 40px;
+    animation: fadeIn ease-in 0.5s;
+}
+.menu_content li:hover {
+    color: var(--white-light-color);
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.5s ease;
+}
+
+.menu_content li{
+    animation-delay: 0.2s;
+} */
+.menu_content li:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.menu_content li:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.menu_content li:nth-child(4) {
+    animation-delay: 0.5s;
+}
+.menu_content li:nth-child(5) {
+    animation-delay: 0.6s;
+}
+.menu_content li:nth-child(6) {
+    animation-delay: 0.7s;
+}
+
+/* End Header Mobile and tablet */
+
+/* Begin Slider */
+.slider{
+    position: relative;
+}
+
+.slider .slider_background {
+    background-color: #000;
+    line-height: 0;
+    width: 100%;
+}
+
+.slider_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    min-width: 330px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slider .slider_content h1 {
+    color: var(--white-color);
+    font-size: 3.8rem;
+    line-height: 1.2;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 0 10px 0;
+    min-width: 300px;
+}
+
+.slider .slider_content p{
+    display: none;
+    text-align: center;
+    color: var(--white-color);
+    font-size: 1.6rem;
+}
+
+.slider .slider_background img {
+    width: 100%;
+    opacity: 0.9;
+}
+
+/* End Slider */
+
+/* Begin calendar */
+.book {
+    position: relative;
+}
+.book_content {
+    z-index: 1;
+}
+.book .book_time {
+    padding: 50px 20px 50px 20px;
+    border: 1px solid var(--line-color);
+    background-color: var(--white-color);
+}
+.book .book_time_title {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.book .book_select_time {
+    display: flex;
+    margin-top: 40px;
+}
+
+.book .book_select_time select {
+    border: none;
+    outline: none;
+    font-size: 2.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.book .book_select_time select:hover {
+    color: var(--green-color);
+}
+
+.book_select_time p {
+    font-size: 6.4rem;
+    color: var(--black-color);
+    line-height: 0;
+    margin: 0 0 30px 0;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+.book .book_arrow {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
+.book_arrow .book_arrow_top {
+    padding-bottom: 20px;
+    padding-right: 54px;
+    position: absolute;
+    bottom: 70px;
+}
+
+.book_arrow .book_arrow_top:hover,
+.book_arrow .book_arrow_bottom:hover{
+    color: var(--green-color);
+}
+
+.book_arrow .book_arrow_bottom {
+    padding-bottom: 54px;
+    padding-right: 54px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.book_check {
+    background-color: #222222;
+    position: relative;
+    color: var(--text-color);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.book_check:hover {
+    background-color: var(--green-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+.book_check_text {
+    min-width: 160px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* End calendar */
+
+/* Begin Mountain Hotel */
+.moutain_hotel{
+    position: relative;
+    padding-bottom: 160px;
+    margin-top: 50px;
+    background-image: url(../image/mountain_hotel.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.moutain_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moutain_hotel .moutain_info h1 {
+    margin-top: 90px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 5rem;
+    color: var(--black-color);
+}
+
+.moutain_hotel .moutain_info h6 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.4rem;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--black-color);
+    font-style: italic;
+    margin-left: 16px;
+    margin-right: 16px;
+    max-width: 700px;
+}
+
+.btn_moutain_mobile {
+    position: absolute;
+    left: 50%;
+    top: 32%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.moutain_info_img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 140px;
+}
+.moutain_info p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+.moutain_info_img img {
+    display: block;
+}
+
+#moutai_hotel_img_1 {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    box-shadow: 4px 4px 16px rgb(0 0 0 / 60%);
+}
+
+#moutai_hotel_img_2 {
+    box-shadow: 4px 4px 16px rgb(0 0 0 / 60%);
+}
+/* End Mountain Hotel */
+
+/* Begin Best Rooms */
+.best_room {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding-top: 70px;
+}
+.best_room_info {
+    display: none;
+}
+
+.best_room_info_active {
+    display: block;
+    animation: fadeIn ease-in 0.5s;
+}
+.best_room_dot {
+    display: flex;
+    align-items: center;
+}
+.best_room_dot_next {
+    height: 12px;
+    width: 12px;
+    background-color: var(--text-color);
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    margin: 50px 16px 112px 16px;
+    transition: all 0.3s ease;
+}
+
+.best_room_dot_next:hover {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    border: 3px solid var(--white-color);
+    outline: 2px solid var(--text-color);
+}
+
+.best_room_dot_acticon {
+    height: 20px;
+    width: 20px;
+    border: 3px solid var(--white-color);
+    outline: 2px solid var(--text-color);
+}
+
+.best_room .best_room_select {
+    margin-top: 7rem;
+    display: flex;
+    align-items: center;
+}
+
+.best_room_select:last-child {
+    flex-direction: row-reverse;
+}
+
+.best_room_img_info {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.best_room_img_info h3 {
+    font-size: 2.4rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.best_room_img_info p {
+    margin-right: 2.6rem;
+    text-align: justify;
+}
+
+.best_room_img_info i {
+    margin-right: 0.6rem;
+}
+
+.best_room_img_info a {
+    color: var(--black-color);
+    font-size: 1.4rem;
+    margin-top: 1.8rem;
+    text-decoration: none;
+    border-bottom: 1px solid var(--black-color);
+}
+
+.best_room_img_info a:hover {
+    color: var(--green-color);
+    border-bottom: 1px solid var(--green-color);
+}
+
+.best_room_img_info .best_room_service {
+    display: flex;
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+/* End Best Rooms */
+
+/* Begin Mountain Climbing */
+.mountain_climbing_mobile {
+    height: 530px;
+    background-image: url(../image/mountain_climbing.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+}
+
+.mountain_climbing_tablet_pc {
+    width: 100%;
+    min-height: 530px;
+    background-image: url(../image/mountain_climbing_tabletand_pc.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.mountain_climbing_text {
+    margin-left: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mountain_climbing_text h1 {
+    line-height: 1.2;
+    margin-bottom: 4rem;
+}
+
+.mountain_climbing_text p {
+    color: var(--black-color);
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 5.4rem;
+    max-width: 66.3rem;
+}
+
+.mountain_climbing_text .btn {
+    display: inline-block;
+}
+/* End Mountain Climbing */
+
+/* Begin Service */
+.service {
+    margin-top: 11.2rem;
+}
+
+.service img {
+    width: 100%;
+}
+
+.service_info {
+    padding-left: 1.6rem;
+}
+.service_info i {
+    color: var(--text-color);
+    font-size: 5.8rem;
+}
+
+.service_info h1 {
+    line-height: 1.2;
+    margin-top: 3.8rem;
+    margin-bottom: 2.2rem;
+}
+
+.service_info .btn {
+    margin-top: 3.4rem;
+    display: inline-block;
+    margin-bottom: 5rem;
+}
+/* End Service */
+
+/* Begin Moana data */
+.moana_data {
+    margin-top: 12.2rem;
+    background-image: url(../image/moana_data_bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.moana_data_info {
+    display: flex;
+    align-items: center;
+    margin: 7rem 0;
+}
+
+.moana_data_des:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.moana_data_des p {
+    color: var(--white-color);
+    margin-left: 3.2rem;
+}
+
+.moana_data_des .moana_data_des_number p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 5.6rem;
+    color: var(--white-color);
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+    margin-right: 3.2rem;
+    text-align: center;
+
+}
+
+.moana_data_des .moana_data_des_sub p {
+    color: var(--white-color);
+    font-size: 2.2rem;
+    text-align: center;
+    margin-right: 3.2rem;
+}
+/* End Moana data */
+
+/* Begin Moana Blog */
+.moana_blog {
+    text-align: center;
+}
+
+.moana_blog .sub_title {
+    margin-top: 6.5rem;
+}
+
+.moana_blog h1 {
+    margin-top: 12rem;
+}
+
+.moana_blog_info {
+    /* margin-top: 7rem; */
+    /* margin-bottom: 10rem; */
+    margin: 7rem 0 10rem 0;
+}
+
+.moana_blog_img img {
+    width: 100%;
+}
+.moana_blog_text_title p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: var(--black-color);
+    font-weight: 600;
+    margin-top: 2.3rem;
+    margin-bottom: 2.3rem;
+}
+
+.moana_blog_read_more a {
+    text-decoration: none;
+    margin-top: 3rem;
+    color: var(--black-color);
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--black-color);
+}
+
+.moana_blog_read_more a:hover {
+    opacity: 0.6;
+}
+/* End Moana Blog */
+
+/* Begin footer */
+.footer {
+    background-color: #222222;
+}
+
+.footer_info {
+    margin-top: 7rem;
+}
+
+
+.footer_info .footer_info_title p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: var(--white-color);
+    font-weight: 600;
+}
+
+.footer_info .footer_info_text p {
+    color: var(--text-color);
+}
+
+.footer_send_mail {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--line-color);
+}
+
+.footer_send_mail input {
+    padding: 1rem;
+    background-color: #222;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+}
+
+
+button.footer_send {
+    background-color: var(--green-color);
+    border: 1px solid var(--gress-color);
+}
+
+button.footer_send:hover {
+    opacity: .6;
+    cursor: pointer;
+}
+
+.footer_send_mail i {
+    color: var(--white-color);
+}
+
+.footer_bottom {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--line-color);
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.footer_bottom i {
+    color: var(--green-color);
+}
+
+.footer_bottom a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin-left: 2rem;
+}
+.footer_bottom a:first-child {
+    margin-left: 0;
+}
+
+.footer_bottom a:hover {
+    opacity: 0.6;
+}
+/* End footer */
+
